@@ -1,156 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganta Kartik Dora - Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { display: flex; background: #f4f7f6; color: #272829; }
-        
-        /* Sidebar */
-        .sidebar { width: 300px; height: 100vh; background: #040b14; color: white; position: fixed; padding: 40px 20px; text-align: center; }
-        .sidebar img { width: 120px; border-radius: 50%; border: 8px solid #2c2f3f; margin-bottom: 15px; }
-        .sidebar h1 { font-size: 24px; margin-bottom: 20px; font-weight: 700; color: #fff; }
-        .sidebar nav ul { list-style: none; text-align: left; margin-top: 30px; }
-        .sidebar nav ul li { padding: 12px 0; }
-        .sidebar nav ul li a { color: #a8a9b4; text-decoration: none; font-size: 16px; display: flex; align-items: center; }
-        .sidebar nav ul li a i { margin-right: 15px; font-size: 20px; color: #149ddd; }
-        .sidebar nav ul li a:hover { color: white; }
-
-        /* Main Content */
-        .main-content { margin-left: 300px; width: 100%; padding: 60px; }
-        .section { margin-bottom: 80px; }
-        .section h3 { font-size: 32px; color: #173b6c; border-bottom: 3px solid #149ddd; width: fit-content; margin-bottom: 30px; padding-bottom: 5px; }
-        
-        /* Hero Section */
-        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; }
-        .hero h2 { font-size: 56px; color: #173b6c; }
-        .hero p { font-size: 26px; color: #555; }
-        .hero span { border-bottom: 3px solid #149ddd; }
-
-        /* Skills Styling */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .skill-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0px 5px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        .skill-card:hover { transform: translateY(-5px); }
-        .skill-card i { font-size: 40px; color: #149ddd; margin-bottom: 15px; display: block; }
-        .skill-card h4 { font-size: 20px; margin-bottom: 10px; color: #173b6c; }
-        .skill-card ul { list-style: none; color: #555; font-size: 15px; }
-        .skill-card ul li { margin-bottom: 5px; }
-
-        .info-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0px 5px 20px rgba(0,0,0,0.05); }
-        .info-item { margin-bottom: 10px; font-size: 18px; }
-        .info-item b { color: #149ddd; margin-right: 5px; }
-
-        /* Mobile Responsive */
-        @media (max-width: 992px) {
-            .sidebar { width: 100%; height: auto; position: relative; padding: 20px; }
-            .main-content { margin-left: 0; padding: 30px; }
-            body { flex-direction: column; }
-            .hero h2 { font-size: 40px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ganta Kartik Dora — Student & Web Developer from Krupashindupalli">
+  <title>Ganta Kartik Dora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Kartik.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <img src="https://via.placeholder.com/150" alt="Profile">
-        <h1>Ganta Kartik Dora</h1>
-        <nav>
-            <ul>
-                <li><a href="#hero"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                <li><a href="#skills"><i class="fa fa-code"></i> Skills</a></li>
-                <li><a href="#education"><i class="fa fa-graduation-cap"></i> Education</a></li>
-            </ul>
-        </nav>
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <p class="hero-label">Student &amp; Web Developer</p>
+        <h1 class="hero-title">Ganta Kartik Dora</h1>
+        <p class="hero-desc">
+          A Class 10 student from Krupashindupalli, passionate about building on the web
+          and learning new technologies every day.
+        </p>
+        <div class="hero-actions">
+          <a href="#skills" class="btn btn-primary">View Skills</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-frame">
+          <img src="kartik.webp" alt="Ganta Kartik Dora" width="400" height="500">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section container">
+      <div class="section-header">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Name</h3>
+          <p>Ganta Kartik Dora</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Location</h3>
+          <p>Krupashindupalli</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+          <p>Bishnu Priya Bidya Pitha Khelua High School</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Class</h3>
+          <p>Class 10</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills section container">
+      <div class="section-header">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-header">
+            <span class="skill-icon">&#60;/&#62;</span>
+            <h3>Web Development</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-header">
+            <span class="skill-icon">M</span>
+            <h3>Microsoft Office</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>MS Word</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-header">
+            <span class="skill-icon">L</span>
+            <h3>LibreOffice</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Writer</li>
+            <li>Calc</li>
+            <li>Impress</li>
+          </ul>
+        </article>
+        <article class="skill-card">
+          <div class="skill-header">
+            <span class="skill-icon">OS</span>
+            <h3>Operating Systems</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Windows</li>
+            <li>Linux</li>
+            <li>Mac</li>
+          </ul>
+        </article>
+        <article class="skill-card skill-card-wide">
+          <div class="skill-header">
+            <span class="skill-icon">&#9881;</span>
+            <h3>Software &amp; Tools</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>VS Code</li>
+            <li>Cursor</li>
+            <li>Sublime Text</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="languages" class="languages section container">
+      <div class="section-header">
+        <span class="section-label">Communication</span>
+        <h2 class="section-title">Languages I Speak</h2>
+      </div>
+      <div class="lang-grid">
+        <div class="lang-item">
+          <span class="lang-name">Telugu</span>
+          <span class="lang-native">తెలుగు</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Odiya</span>
+          <span class="lang-native">ଓଡ଼ିଆ</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Hindi</span>
+          <span class="lang-native">हिन्दी</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">English</span>
+          <span class="lang-native">English</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section container">
+      <div class="contact-box">
+        <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-desc">
+          I'm always open to learning, collaborating, and exploring new ideas.
+          Feel free to reach out!
+        </p>
+        <a href="https://github.com/gantakartikdora" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Ganta Kartik Dora. All rights reserved.</p>
+      <p class="footer-location">Krupashindupalli, India</p>
     </div>
+  </footer>
 
-    <!-- Main Content Area -->
-    <div class="main-content">
-        
-        <!-- Hero Section -->
-        <div id="hero" class="hero">
-            <h2>Ganta Kartik Dora</h2>
-            <p>I am a <span>Student from Odisha</span></p>
-        </div>
-
-        <!-- About Section -->
-        <div id="about" class="section">
-            <h3>About Me</h3>
-            <div class="info-box">
-                <p>Hello! I am <strong>Ganta Kartik Dora</strong>. I live in the village of <strong>Krupashindupalli, Pattapur, Odisha</strong>. I am currently a 10th-grade (Matric) student with a deep interest in web development and computer software.</p>
-                <br>
-                <div class="info-item"><b>Location:</b> Pattapur, Odisha, India</div>
-                <div class="info-item"><b>Class:</b> 10th (Matric)</div>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div id="skills" class="section">
-            <h3>Technical Skills</h3>
-            <div class="skills-grid">
-                <!-- Web Dev -->
-                <div class="skill-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <h4>Web Development</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-
-                <!-- MS Office -->
-                <div class="skill-card">
-                    <i class="fa-regular fa-file-word"></i>
-                    <h4>Microsoft Office</h4>
-                    <ul>
-                        <li>MS Word</li>
-                        <li>MS Excel</li>
-                        <li>MS PowerPoint</li>
-                    </ul>
-                </div>
-
-                <!-- Open Office -->
-                <div class="skill-card">
-                    <i class="fa-solid fa-pen-nib"></i>
-                    <h4>LibreOffice</h4>
-                    <ul>
-                        <li>LibreOffice Writer</li>
-                        <li>LibreOffice Calc</li>
-                        <li>LibreOffice Impress</li>
-                    </ul>
-                </div>
-
-                <!-- Tools -->
-                <div class="skill-card">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <h4>Software & Tools</h4>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>Sublime Text</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Education Section -->
-        <div id="education" class="section">
-            <h3>Education</h3>
-            <div class="info-box">
-                <div class="info-item"><b>School:</b> Bishnu Priya Bidya Pitha Khelua High School</div>
-                <div class="info-item"><b>Location:</b> Odisha</div>
-                <div class="info-item"><b>Grade:</b> Matric (Class 10)</div>
-            </div>
-        </div>
-
-    </div>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
